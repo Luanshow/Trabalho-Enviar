@@ -1,0 +1,221 @@
+/*
+ * Carrega a fonte "Roboto" do Google Fonts:
+ *    Referências:
+ *        https://fonts.google.com/specimen/Roboto
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ /*
+  * Carrega a biblioteca Normalize que força a padronização dos estilos entre os
+  * navegadores:
+  *    Referências:
+  *        https://github.com/necolas/normalize.css
+  *        https://cdnjs.com/libraries/normalize
+  */
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+ 
+ /*
+  * Biblioteca de ícones:
+  *     Referências:
+  *        https://fontawesome.com/
+  *        https://cdnjs.com/libraries/font-awesome  
+  */
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+ 
+ /* Todos os elementos */
+ * {
+     box-sizing: border-box;
+     outline: none;
+ }
+ 
+ /* Elementos da raiz e o #wrap */
+ html,
+ body,
+ #wrap {
+     /* Sticky footer */
+     position: relative;
+     width: 100%;
+ 
+     padding: 0;
+     margin: 0;
+     height: 100%;
+ }
+ 
+ /* Fonte padrão */
+ html,
+ body {
+     font-family: Roboto, sans-serif;
+     font-size: 16px;
+ }
+ 
+ /* Fundo da página */
+ body {
+     background-attachment: fixed;
+     background-color: rgb(0, 89, 255);
+     background-image: url("/img/background01.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ /* Formata links */
+ a {
+     text-decoration: none;
+     color: steelblue;
+ }
+ 
+ a:hover {
+     color: orangered;
+ }
+ 
+ /* Limita o crescimento do conteúdo */
+ #wrap {
+     max-width: 1024px;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ /* Cabeçalho → header */
+ #wrap>header {
+     background: rgba(0, 6, 95, 0.85);
+     display: flex;
+     align-items: center;
+ }
+ 
+ /* Logotipo */
+ #wrap>header img {
+     width: 95px;
+     display: block;
+     margin: 0.5rem;
+ }
+ 
+ /* Título */
+ #wrap>header h1 {
+     font-size: 1.6rem;
+     margin: 0;
+     color: rgb(255, 255, 255);
+     text-align: center;
+ }
+ 
+ /* Slogan */
+ #wrap>header small,
+ #wrap>footer small {
+     display: block;
+     font-size: 68%;
+ }
+ 
+ #wrap>nav,
+ #wrap>footer {
+     background-color: rgba(0, 6, 95, 0.85);
+     display: flex;
+     justify-content: flex-end;
+     border-top: 1px dotted rgb(210, 255, 210);
+     border-bottom: 1px dotted rgb(210, 255, 210);
+ }
+ 
+ #wrap>nav a {
+     color: rgb(255, 255, 255);
+     padding: 0.5rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     transition: .2s;
+ }
+ 
+ #wrap>nav a:hover {
+     background: rgba(1, 0, 7, 0.9);
+     color: rgb(85, 97, 85);
+ }
+ 
+ #wrap>nav a:first-child {
+     margin-right: auto;
+ }
+ 
+ #wrap>nav a i {
+     font-size: 2rem;
+ }
+ 
+ #wrap>nav a span {
+     padding-top: .5rem;
+ }
+ 
+ /* Rodapé */
+ #wrap>footer {
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ #wrap>footer i {
+     font-size: 1.5rem;
+ }
+ 
+ #wrap>footer a {
+     color: rgb(253, 253, 253);
+     padding: .25rem;
+ }
+ 
+ #wrap>footer a:hover {
+     background-color: rgb(253, 253, 253);
+     color: rgba(85, 97, 85);
+ }
+ 
+ #wrap>footer div a:hover {
+     background-color: transparent;
+     color: rgb(85, 97, 85);
+ }
+ 
+ #wrap>footer div {
+     text-align: center;
+     color: rgb(255, 255, 255);
+     font-size: 90%;
+ }
+ 
+ #wrap>footer div small {
+     font-size: 85%;
+ }
+ 
+ /* Conteúdo principal → main */
+ #wrap>main {
+     flex-grow: 1;
+ }
+ 
+ #wrap>main article,
+ #wrap>main aside {
+     padding: 1rem;
+     background-color: rgba(255, 255, 255, 0.61);
+ }
+ 
+ #wrap>main aside {
+     background-color: rgba(255, 255, 255, 0.61);
+     border-top: 3px dotted rgb(255, 255, 255, 0.466);
+ }
+ 
+ /* Ajustes para telas maiores */
+ 
+ /* Menu principal à partir de 475px */
+ @media screen and (min-width: 475px) {
+ 
+     #wrap>nav {
+         justify-content: center;
+     }
+ 
+     #wrap>nav a {
+         padding: 0.5rem 1rem;
+         flex-direction: row;
+     }
+ 
+     #wrap>nav a:first-child {
+         margin: 0;
+     }
+ 
+     #wrap>nav a i {
+         font-size: 1.2rem;
+     }
+ 
+     #wrap>nav a span {
+         padding-top: 0;
+         padding-left: .3rem;
+     }
+ 
+ }
